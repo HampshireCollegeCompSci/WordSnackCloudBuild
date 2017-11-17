@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400008}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
+  m_Layer: 0
+  m_Name: VariableController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.80180883, y: -1.04320502, z: 3.16912556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a032e2eafff347caa0971130fee12dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardSize: 8
+  characterTasteSpots: []
+  timedMode: 0
+  globalTimer: 0
+  gameLength: 180
+  timerStart: 0
+  paused: 0
+  endGame: 0
+  closingTimeDelay: .5
+  firstAlert: 30
+  secondAlert: 15
+  iPhoneType: 2
+  numA: 6
+  numB: 1
+  numC: 1
+  numD: 2
+  numE: 7
+  numF: 1
+  numG: 1
+  numH: 3
+  numI: 5
+  numJ: 1
+  numK: 1
+  numL: 2
+  numM: 2
+  numN: 3
+  numO: 5
+  numP: 1
+  numQ: 1
+  numR: 2
+  numS: 3
+  numT: 4
+  numU: 3
+  numV: 1
+  numW: 1
+  numX: 1
+  numY: 1
+  numZ: 1
+  totalLetters: 98
+  totalVowels: 42
+  threeLettersMult: 3
+  fiveOrLongerMult: 4
+  uncommonLettersMult: 3
+  endsWithVowelMult: 2
+  twoOrMoreVowelsMult: 2
+  twoOrMoreSameMult: 5
+  startsWithVowelMult: 3
+  startsAndEndsWithSameMult: 7
+  fourLettersMult: 3
+  equalVowelsAndConsonantsMult: 2
+  trashCollectionMult: 0
+  bigMealBonus: 2
+  doubleTasteMatchBonus: 2
+  TastesForTrash: 0a000000
+  TastesForMeghan: 0100000002000000
+  TastesForStella: 0900000004000000
+  TastesForKelvin: 0500000006000000
+  TastesForFred: 0800000007000000
+  TastesForSpike: 0000000003000000
+  bonus: 0
+  notWord: 0
+  isWord: 0
+  hungry: 0
+  chewing: 0
+  happySound: 0
+  sadSound: 0
+  hungrySound: 0
+  chewingSound: 0
+  shuffleSound: 0
+  letterGenerationSound: 0
+  clickSound: 0
+  doubleTasteSound: 0
+  eatingSound: 0
+  bellSound: 0
+  instructionsDone: 0
+  minWordLength: 2
+  maxWordLength: 8
+  minNumVowels: 2
+  maxNumVowels: 4
+  characterSelectNum: 2
+  totalNumChar: 5
+  maxFed: 10
+  maxWaitingTime: 20
+  maxHungerTime: 15
+  maxEatingTime: 12
+  maxMultiplier: 5
+  minLettersToTrash: 1
+  gameOverFadeInTimer: .200000003
+  gameOverOnScreenTimer: 2
+  phase2CharacterPositions:
+  - {x: 0, y: .5, z: 1}
+  - {x: 0, y: .5, z: 1}
+  selectedCharacters:
+  - {fileID: 0}
+  - {fileID: 0}
+  selectedCharacterNums: 
+  characterSelected: 
+  currentCharacterSelectNum: 0
+  phase1SelectedCharPositions: []
+  timeToHighlightTaste: 00000000
+  timeToCheckForTastes: 0
+  char1TasteChecked: 0
+  char2TasteChecked: 0
+  score: 0
+  totalLetterScore: 0
+  totalMultiplierScore: 0
+  trashedLetters: 0
+  trashedLetterScore: 0
+  gameTimer: 0
+  timeToChangeGameState: 0
+  timeToEndGame: 0
+  wordSelected: 0
+  mostRecentWordScore: 0
+  mostRecentBonus: 0
+  mostRecentLetterScore: 0
+  lettersRemaining: 0
+  scoreListSize: 10
+  scoreText: {fileID: 10200000, guid: b22c0969c3b5e4ffcaf1329029dcda4d, type: 2}
+  multiplierText: {fileID: 10200000, guid: cc47e4942a652446aad7189bca93153d, type: 2}
+  smallMultiplierThreshold: 3
+  mediumMultiplierThreshold: 6
+  largeMultiplierThreshold: 9
+  smallScoreThreshold: 5
+  mediumScoreThreshold: 15
+  largeScoreThreshold: 25
+  smallColor: {r: .558823526, g: .63488847, b: 1, a: 0}
+  mediumColor: {r: .0955882072, g: 1, b: .139249548, a: 0}
+  largeColor: {r: 1, g: .641379297, b: 0, a: 0}
+  BaseScoreDisplayTime: .25
+  TasteMatchDisplayTime: .400000006
+  BigMealDisplayTime: .400000006
+  ScoreFadeTime: .200000003
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed73f78def72c4f75b1596c5a6276549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumbs: {fileID: 19800000, guid: af5c42be43a8847ad86b0831c7d91076, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
