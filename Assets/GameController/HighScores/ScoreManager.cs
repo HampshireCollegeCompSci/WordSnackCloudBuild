@@ -18,7 +18,7 @@ public class ScoreManager
 	//checks whether there has been a new high score, and sets the new high score if there has 
 	public static bool CheckNewHighScore (string char1, string char2, string mode, float score) { 
 		string lookup = PlayerPrefsString(char1, char2, mode);
-		if (PlayerPrefs.GetFloat(lookup) == null || score > PlayerPrefs.GetFloat(lookup)){
+        if (!(PlayerPrefs.HasKey(lookup)) || score > PlayerPrefs.GetFloat(lookup)){
 			PlayerPrefs.SetFloat(lookup, score);
 			PlayerPrefs.Save();
 			Debug.Log("new high score");
@@ -31,7 +31,7 @@ public class ScoreManager
 	//fetches the playerprefs score for the current combination of characters and game mode
 	public static float GetPlayerPrefsScore (string char1, string char2, string mode) {
 		string lookup = PlayerPrefsString(char1, char2, mode);
-		if (PlayerPrefs.GetFloat(lookup) != null){
+        if (PlayerPrefs.HasKey(lookup)){
 			return PlayerPrefs.GetFloat(lookup);
 		} else {
 			PlayerPrefs.SetFloat(lookup, 0);

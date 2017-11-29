@@ -81,14 +81,11 @@ public class LetterController : MonoBehaviour
             positionOnBoard[i] = -1;
         }
         variables.letterGenerationSound = true;
-        if (Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            if (!(CheckIPhoneType.OldPhone()))
+
+            if (!(CheckIPhoneType.OldPhone())) //Don't create steam on old iPhones
             {
                 CreateSteam();
             }
-            //CheckPermutations("xyzwvtxx");
-        }
     }
 
     // Update is called once per frame
@@ -135,15 +132,13 @@ public class LetterController : MonoBehaviour
         //    gameController.GetComponent<wordBuildingController>().sendVariablestoScoreScreen();
         //    Application.LoadLevel("ScoreScreen");
         //}
-        if (Application.platform == RuntimePlatform.IPhonePlayer)
-        {
+   
             if (!(CheckIPhoneType.OldPhone()))
             {
                 TurnOnOffSteam();
             }
             countToEndGame = CountEmptyLetters(myLetters);
             //updatePlaceholders();
-        }
     }
 
 		//KEEP THIS FUNCTION - it is in progress!!
@@ -204,12 +199,18 @@ public class LetterController : MonoBehaviour
 		void TurnOnOffSteam ()
 		{
 				for (int x = 0; x < boardSize; x++) {
+            ParticleSystem stoveSteamParticleSystem = stoveSteam[x].GetComponent<ParticleSystem>();
+            ParticleSystem stoveHeatParticleSystem = stoveHeat[x].GetComponent<ParticleSystem>();
+            var steamEmission = stoveSteamParticleSystem.emission;
+            var heatEmission = stoveHeatParticleSystem.emission;
 						if (x < numLettersOnStove && variables.isWord) {
-								stoveSteam [x].GetComponent<ParticleSystem>().emissionRate = 30;
-								stoveHeat [x].GetComponent<ParticleSystem>().emissionRate = 10;
+                //Debug.Log("Steaming");
+                steamEmission.enabled = true;
+                heatEmission.enabled = true;
 						} else {
-								stoveSteam [x].GetComponent<ParticleSystem>().emissionRate = 0;
-								stoveHeat [x].GetComponent<ParticleSystem>().emissionRate = 0;
+                //Debug.Log("Attempting to turn steam off");
+                steamEmission.enabled = false;
+                heatEmission.enabled = false;
 						}
 				}
 		}

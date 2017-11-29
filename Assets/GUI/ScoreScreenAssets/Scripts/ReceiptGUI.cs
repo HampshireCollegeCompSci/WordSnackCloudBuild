@@ -54,14 +54,15 @@ public class ReceiptGUI : MonoBehaviour
 		rowCount = 0;
 		firstRowPos = bottomInstance.transform.position;
 		Debug.Log("First row pos: " + firstRowPos.ToString());
-		selectedCharacter1 = PlayerPrefs.GetInt("Character 1");
-		selectedCharacter2 = PlayerPrefs.GetInt("Character 2");
+        selectedCharacter1 = PlayerPrefs.GetInt("Character 1"); 
+ 		selectedCharacter2 = PlayerPrefs.GetInt("Character 2");
 		
 		string char1String = Character.CharacterNameLookup[selectedCharacter1];
-		string char2String = Character.CharacterNameLookup[selectedCharacter2];        
-		if (selectedCharacter1 == null)
-			char1String = "Error";
-		if (selectedCharacter2 == null)
+		string char2String = Character.CharacterNameLookup[selectedCharacter2];
+        if (!PlayerPrefs.HasKey("Character 1"))
+            char1String = "Error";
+            
+        if (!PlayerPrefs.HasKey("Character 2"))
 			char2String = "Error";
 		
 		Debug.Log("Char 1 " + char1String);
