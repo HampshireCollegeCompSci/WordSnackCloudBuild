@@ -7,7 +7,7 @@ using System.Linq;
 public class LetterController : MonoBehaviour
 {
         #region Variables
-        VariableControl variables = new VariableControl ();
+        VariableControl variables;
 		public bool lastHand = false;
 		public bool noWordsLeft = false;
 		public letterBehaviour letterObj;

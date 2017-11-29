@@ -13,7 +13,7 @@ public class letterBehaviour : MonoBehaviour
 		public Sprite[] spriteStove;
 		public int letterAlphabetOrder;
 		LetterController l; 
-		VariableControl variables;
+		//VariableControl variables;
 		public bool isMoving = false;
 		void Start ()
 		{
@@ -22,7 +22,7 @@ public class letterBehaviour : MonoBehaviour
 				thisSprite = gameObject.GetComponent<SpriteRenderer> ();
 				SetLetter ();
 				l = GameObject.Find ("letterGeneration").GetComponent<LetterController> ();
-				variables = GameObject.Find ("VariableController").GetComponent<VariableControl> (); 
+				//variables = GameObject.Find ("VariableController").GetComponent<VariableControl> (); 
 		}
 	
 		// Update is called once per frame
