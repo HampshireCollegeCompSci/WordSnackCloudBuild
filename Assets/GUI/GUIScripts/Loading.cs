@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+//This is deprecated now that we're using LoadLevel.Async - Josiah
 
 public class Loading : MonoBehaviour {
 	
@@ -18,11 +20,11 @@ public class Loading : MonoBehaviour {
 			//DontDestroyOnLoad(gameObject);
 		}
 	}
-	
-	// Update is called once per frame
-	void OnGUI () {
+	//Commented out because we're now loading scenes async and it's pretty fast on modern phones anyway
+	/*void OnGUI () {
 		if(showLoadingScreen && Application.isLoadingLevel && loadingScreen != null){
 			GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),loadingScreen);
 		}
 	}
+	*/
 }

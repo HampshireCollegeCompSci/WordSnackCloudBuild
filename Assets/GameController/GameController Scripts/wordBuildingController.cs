@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class wordBuildingController : MonoBehaviour
 {
@@ -150,16 +151,6 @@ public class wordBuildingController : MonoBehaviour
 				//for (int i = 0; i < tasteHighlighters.Length; i++) {
 				//		tasteHighlighters [i].transform.position = tasteHighLightPos [i];
 				//}
-				//moves the highlighters over, if it's an iPhone 5
-				//		if (variables.iPhoneType == 2) {
-				//				for (int i = 0; i < tasteHighlighters.Length -2; i++) {
-				//						tasteHighlighters [i].transform.position += Vector3.left;
-				//				}
-				//				for (int i = 2; i < tasteHighlighters.Length; i++) {
-				//						tasteHighlighters [i].transform.position += Vector3.right;
-				//				}
-				//		}
-
 
 		}
 		// Update is called once per frame
@@ -255,8 +246,7 @@ public class wordBuildingController : MonoBehaviour
 				closingTimeText.SetActive (true);
 				yield return new WaitForSeconds (variables.gameOverOnScreenTimer);
                 sendVariablestoScoreScreen();
-				Application.LoadLevel ("ScoreScreen");
-		
+                SceneManager.LoadScene("ScoreScreen");
 		}
 
     // This saves the current scores and stats to PlayerPrefs so the receipt can access them
@@ -424,16 +414,5 @@ public class wordBuildingController : MonoBehaviour
 				tasteTexts [3].GetComponent<Renderer>().material.SetTexture ("_MainTex", rightBottomTaste [character2Num]);
 
 				
-
-
-				/*	if (variables.iPhoneType == 1) {
-						tastePanels [0].transform.localPosition = (new Vector3 (-.7f, -0.01f, 0));
-						tastePanels [1].transform.localPosition = (new Vector3 (.7f, -0.01f, 0));
-				}
-				if (variables.iPhoneType == 2) {
-						tastePanels [0].transform.position = (new Vector3 (0, -0.01f, 0));
-						tastePanels [1].transform.position = (new Vector3 (0, -0.01f, 0));
-				}
-    */            
 		}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class PlayMusic : MonoBehaviour
 {
 	
@@ -55,12 +56,12 @@ public class PlayMusic : MonoBehaviour
 				audioManager.SetAllVolume ();
 
 
-				if (Application.loadedLevelName == "SplashScreen") {
+        if (SceneManager.GetActiveScene().name == "SplashScreen") {
 						//Plays the Space Ship Sound with a possible delay.
 						Invoke ("SpaceShipSound", 0);
 				}
 
-				if (Application.loadedLevelName == "ScoreScreen") {
+				if (SceneManager.GetActiveScene().name == "ScoreScreen") {
 
                         audioManager.Play(16);
 				}
@@ -78,7 +79,7 @@ public class PlayMusic : MonoBehaviour
                     variables = GameObject.Find("VariableController").GetComponent<VariableControl>();
                 }
 
-				if (Application.loadedLevelName == "About") {
+				if (SceneManager.GetActiveScene().name == "About") {
 						if (GameObject.Find ("Text").GetComponent<AboutUsMove> ().clickSound) {
 								audioManager.Play (1);
 								GameObject.Find ("Text").GetComponent<AboutUsMove> ().clickSound = false;
@@ -86,7 +87,7 @@ public class PlayMusic : MonoBehaviour
 				}
 
 
-				if (Application.loadedLevelName == "SplashScreen") {
+				if (SceneManager.GetActiveScene().name == "SplashScreen") {
 						//Stops any other music or sound tracks that may still be playing.
 						audioManager.Stop (34);
 						audioManager.Stop (35);
@@ -98,7 +99,7 @@ public class PlayMusic : MonoBehaviour
 						audioManager.PlayLoop (4);
 				}
 
-				if (Application.loadedLevelName == "StartScreenTest") {
+				if (SceneManager.GetActiveScene().name == "StartScreenTest") {
 						//Stops any music that should not be playing
 						audioManager.Stop (34);
 						audioManager.Stop (35);
@@ -118,7 +119,7 @@ public class PlayMusic : MonoBehaviour
 				}
 
 				//Sounds for Character Select Screen
-				if (Application.loadedLevelName == "CharacterSelectTest") {
+				if (SceneManager.GetActiveScene().name == "CharacterSelectTest") {
 
 						//Stops any sounds that should not be playing.
 						audioManager.Stop (34);
@@ -167,7 +168,7 @@ public class PlayMusic : MonoBehaviour
 				////////////////////////////
 				//Word Making Phase Sounds//
 				////////////////////////////
-				if (Application.loadedLevelName == "WordMaking") {
+				if (SceneManager.GetActiveScene().name == "WordMaking") {
 						//Stops the Menu Music.
 						audioManager.Stop (4);
 						//Loops the GamePlay Music.
@@ -194,7 +195,7 @@ public class PlayMusic : MonoBehaviour
 				///////////////////////
 				//Score Screen Sounds//
 				///////////////////////
-				if (Application.loadedLevelName == "ScoreScreen") {
+				if (SceneManager.GetActiveScene().name == "ScoreScreen") {
 						//Stops the GamePlay Music
 						audioManager.Stop (34);
 						audioManager.Stop (35);
@@ -451,7 +452,7 @@ public class PlayMusic : MonoBehaviour
 		//}
 		void ClickSound ()
 		{
-				if (Application.loadedLevelName == "WordMaking") {
+				if (SceneManager.GetActiveScene().name == "WordMaking") {
 						if (GameObject.Find ("pauseButton").GetComponent<pause> ().clickSound == true) {
 								audioManager.Play (1);
 								GameObject.Find ("pauseButton").GetComponent<pause> ().clickSound = false;
@@ -478,7 +479,7 @@ public class PlayMusic : MonoBehaviour
 
 		void TimedWarning ()
 		{
-            if (Application.loadedLevelName == "WordMaking")
+            if (SceneManager.GetActiveScene().name == "WordMaking")
             {
                 //30 second bell
                 if (Mathf.RoundToInt(variables.globalTimer) == 30)

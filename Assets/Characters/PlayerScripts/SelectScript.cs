@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 // Class used to manage character selection 
 public class SelectScript : MonoBehaviour
@@ -61,7 +62,7 @@ public class SelectScript : MonoBehaviour
 			gameObject.GetComponent<BoxCollider>().enabled = true;
 		}
 		//deselects character when "Phase2" is loaded 
-		if (Application.loadedLevelName == "WordMaking" && selected) {
+		if (SceneManager.GetActiveScene().name == "WordMaking" && selected) {
 			selected = false;
 			gameObject.transform.localScale = new Vector3 (0.5F, 0.5F, 0.5F);
 		}
@@ -74,7 +75,7 @@ public class SelectScript : MonoBehaviour
 		toggleSelect(); 
 		
 		//only run the following during the selection phase
-		if (Application.loadedLevelName == "CharacterSelectTest"){
+		if (SceneManager.GetActiveScene().name == "CharacterSelectTest"){
 			string gameMode = PlayerPrefs.GetInt("timed") == 1 ? "timed" : "casual";
 			//if clicking the character selected it and there are still open spaces for selection
 			if (selected && variables.currentCharacterSelectNum < variables.characterSelectNum) {
@@ -160,7 +161,7 @@ public class SelectScript : MonoBehaviour
 		PlayerPrefs.SetInt("Character 1", variables.selectedCharacterNums[0]);
 		PlayerPrefs.SetInt("Character 2", variables.selectedCharacterNums[1]);
 		
-		Application.LoadLevel("WordMaking");
+        SceneManager.LoadScene("WordMaking");
 		//moves the characters into their appropriate positions
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TimedButtonHandler : MonoBehaviour {
 	public Texture timeModeUnselected;
@@ -33,6 +34,6 @@ public class TimedButtonHandler : MonoBehaviour {
 		buttonPressed = true;
 		gameObject.GetComponent<Renderer>().material.color = Color.white;
 		PlayerPrefs.SetInt("timed",1);
-		Application.LoadLevel("CharacterSelectTest");
+        SceneManager.LoadSceneAsync("CharacterSelectTest");
 	}
 }

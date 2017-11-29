@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -35,13 +36,13 @@ public class ChangeScene : MonoBehaviour
 
         if (timeGoneBy > 5.2f)
         {
-            if (Application.loadedLevelName == "SplashScreen")
+            if (SceneManager.GetActiveScene().name == "SplashScreen")
             {
-                Application.LoadLevel("StartScreenTest");
+                SceneManager.LoadScene("StartScreenTest");
             }
         }
 
-		if (Application.loadedLevelName == "About") {
+		if (SceneManager.GetActiveScene().name == "About") {
 			transform.GetComponent<SpriteRenderer>().enabled = false;
 		}else{
 			transform.GetComponent<SpriteRenderer>().enabled = true;
@@ -51,15 +52,15 @@ public class ChangeScene : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Application.loadedLevelName == "SplashScreen")
+        if (SceneManager.GetActiveScene().name == "SplashScreen")
         {
-            Application.LoadLevel("StartScreenTest");
+            SceneManager.LoadScene("StartScreenTest");
         }
     }
 
 //    void OnGUI()
 //    {
-//		if(Application.loadedLevelName == "SplashScreen" || Application.loadedLevelName == "StartScreenTest"){
+//		if(SceneManager.GetActiveScene().name == "SplashScreen" || SceneManager.GetActiveScene().name == "StartScreenTest"){
 //	        GUIStyle style = new GUIStyle();
 //	        style.fontSize = 22;
 //	        style.normal.textColor = Color.white;

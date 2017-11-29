@@ -75,7 +75,7 @@ public class ScoreTextScript : MonoBehaviour
 
 		if (score)
 		{
-		    Debug.Log("Is a score prefab");
+		    //Debug.Log("Is a score prefab");
 			// it's a score prefab
 			// if there was a big meal bonus, we have to disregard it for now since it is 
             //displayed separately at the end of the counting

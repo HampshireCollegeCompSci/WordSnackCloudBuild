@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class exitGameplayButton : MonoBehaviour {
 	pause p;
@@ -27,6 +28,6 @@ public class exitGameplayButton : MonoBehaviour {
 	{
 		clickSound = true;
 		gameObject.GetComponent<Renderer>().material.SetTexture("_MainTex", p.exitButtons[0]);
-		Application.LoadLevel("StartScreenTest");
+        SceneManager.LoadScene("StartScreenTest");
 	}
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -269,7 +270,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         //get the same variables everyone else is using
-        if (Application.loadedLevelName != "StartScreenTest")
+        if (SceneManager.GetActiveScene().name != "StartScreenTest")
         {
             selectScript = gameObject.GetComponent<SelectScript>();
             variables = GameObject.Find("VariableController").GetComponent<VariableControl>();
@@ -341,7 +342,7 @@ public class Character : MonoBehaviour
 
             //Let's see if all that text-making worked or not
             //Debug.Log("My character number is " + characterNum + " and I like " + thingsILike);
-            if (Application.loadedLevelName == "WordMaking")
+            if (SceneManager.GetActiveScene().name == "WordMaking")
             {
                 //uses lower res sprites if the phone is a 4s or older
                 if (characterNum != 0)
@@ -427,7 +428,7 @@ public class Character : MonoBehaviour
             // damon took this out - it was printing a lot of times!
             //print (thingsILike);
         }
-        if (Application.loadedLevelName == "CharacterSelectTest")
+        if (SceneManager.GetActiveScene().name == "CharacterSelectTest")
         {
 
             if (selectScript.selected)
@@ -440,7 +441,7 @@ public class Character : MonoBehaviour
             }
         }
         //checks to see if tastes should be highlighted 
-        if (Application.loadedLevelName == "WordMaking")
+        if (SceneManager.GetActiveScene().name == "WordMaking")
         {
             if (characterNum != 0 && variables.timeToCheckForTastes)
             {
@@ -474,7 +475,7 @@ public class Character : MonoBehaviour
     void OnMouseUpAsButton()
     {
 
-        if (Application.loadedLevelName == "WordMaking")
+        if (SceneManager.GetActiveScene().name == "WordMaking")
         {
             //First grab the word - we're gonna need it!
             string word = letterControl.sendWord();
@@ -675,7 +676,7 @@ public class Character : MonoBehaviour
 
     void OnDestroy()
     {
-        if (Application.loadedLevelName == "WordMaking")
+        if (SceneManager.GetActiveScene().name == "WordMaking")
         {
             if (PlayerPrefs.GetInt("Character 1") == characterNum)
             {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AboutUsMove : MonoBehaviour {
 	Vector3 pos;
@@ -31,7 +32,7 @@ public class AboutUsMove : MonoBehaviour {
 			pos.z -= Time.deltaTime*speed;
 			transform.localPosition = pos;
 		}else{
-			Application.LoadLevel ("StartScreenTest");
+            SceneManager.LoadScene("StartScreenTest");
 		}
 		clickSound = true;
 	}

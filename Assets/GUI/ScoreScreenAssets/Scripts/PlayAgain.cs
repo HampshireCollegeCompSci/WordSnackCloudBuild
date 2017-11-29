@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayAgain : MonoBehaviour
 {
@@ -33,6 +34,6 @@ public class PlayAgain : MonoBehaviour
 				gameObject.GetComponent<SpriteRenderer> ().sprite = PlayAgainUnpressed;
 				clickSound = true;
 				ScoreLoadingScript.SetLoadingScreen ();
-				Application.LoadLevel ("WordMaking");
+                SceneManager.LoadSceneAsync("WordMaking");
 		}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class characterSelectController : MonoBehaviour {
 	VariableControl variables;
@@ -47,7 +48,7 @@ public class characterSelectController : MonoBehaviour {
 		Destroy (GameObject.Find ("Starfield Background"));
 //		Destroy (GameObject.Find ("Diner"));
 
-		Application.LoadLevel("WordMaking");
+        SceneManager.LoadScene("WordMaking");
 		//moves the characters into their appropriate positions
 	}
 }

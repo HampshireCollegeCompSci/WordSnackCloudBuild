@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuButton : MonoBehaviour {
 
@@ -103,7 +104,7 @@ public class PauseMenuButton : MonoBehaviour {
 			if(UniversalInput.press && UniversalInput.inRect(exitGameClickedBounds, camera)){
 				exitGameClicked.SetActive(true);
 //				StartCoroutine(waitForButtonPress("StartScreenTest"));
-				Application.LoadLevel("StartScreenTest");
+                SceneManager.LoadSceneAsync("StartScreenTest");
 			}else{
 			}
 		}
@@ -112,7 +113,7 @@ public class PauseMenuButton : MonoBehaviour {
 	IEnumerator waitForButtonPress (string scene) {
 		yield return new WaitForSeconds (0.5f);
 		if (scene != "UnPause") {
-			Application.LoadLevel(scene);
+            SceneManager.LoadSceneAsync(scene);
 		} else {
 			pauseMenuBackground.SetActive(false);
 			dinerRoom.SetActive(true);

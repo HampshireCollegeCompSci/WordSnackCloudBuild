@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class VariableControl : MonoBehaviour
 {
@@ -200,7 +201,7 @@ public class VariableControl : MonoBehaviour
 		{
 
 				Resources.UnloadUnusedAssets ();
-				Debug.Log (Application.loadedLevelName);
+				Debug.Log (SceneManager.GetActiveScene().name);
 
 				if (PlayerPrefs.GetInt ("timed") == 0) {
 						timedMode = false;
@@ -209,7 +210,7 @@ public class VariableControl : MonoBehaviour
 				}
 
 				//sets totals for tuning variables of letters
-				if (Application.loadedLevelName == "WordMaking") {
+				if (SceneManager.GetActiveScene().name == "WordMaking") {
 						letterBag = new Dictionary<char, int> () {
 				{ 'a', numA},
 				{ 'b', numB},
@@ -294,7 +295,7 @@ public class VariableControl : MonoBehaviour
 						char2TasteChecked = false;
 				}
 				//checks if all three characters are selected 
-				if (Application.loadedLevelName == "CharacterSelectTest" && currentCharacterSelectNum == 2) {
+				if (SceneManager.GetActiveScene().name == "CharacterSelectTest" && currentCharacterSelectNum == 2) {
 						//triggers the load of "Phase2" if conditions are met
 						timeToChangeGameState = true;
 				} else {
@@ -305,7 +306,7 @@ public class VariableControl : MonoBehaviour
 
 		void KeepTime ()
 		{
-				if (Application.loadedLevelName == "WordMaking") {
+				if (SceneManager.GetActiveScene().name == "WordMaking") {
 						if (timerStart == true && globalTimer > 0) {
 								globalTimer -= Time.deltaTime;
 						}

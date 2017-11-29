@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadStart : MonoBehaviour {
 
@@ -15,6 +16,6 @@ public class LoadStart : MonoBehaviour {
 
 	
 	void OnMouseDown () {
-		Application.LoadLevel("StartScreenTest");
+        SceneManager.LoadSceneAsync("StartScreenTest");
 	}
 }

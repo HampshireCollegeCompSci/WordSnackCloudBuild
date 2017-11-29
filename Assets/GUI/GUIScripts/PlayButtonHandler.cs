@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayButtonHandler : MonoBehaviour {
 	public Texture playUnselected;
@@ -30,6 +31,6 @@ public class PlayButtonHandler : MonoBehaviour {
        
 		buttonPressed = true;
 		PlayerPrefs.SetInt("timed",0);
-		Application.LoadLevel("CharacterSelectTest");
+        SceneManager.LoadSceneAsync("CharacterSelectTest");
     }
 }

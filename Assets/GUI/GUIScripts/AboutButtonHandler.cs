@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AboutButtonHandler : MonoBehaviour {
 	public Texture aboutUnselected;
@@ -15,7 +16,7 @@ public class AboutButtonHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Application.loadedLevelName != "StartScreenTest") {
+        if (SceneManager.GetActiveScene().name != "StartScreenTest") {
 			mAbout.GetComponent<Renderer>().material.mainTexture = aboutUnselected;
 		}
 	}
@@ -40,7 +41,7 @@ public class AboutButtonHandler : MonoBehaviour {
          }
          buttonPressed = true;
          clickSound = true;
-         Application.LoadLevel("About");
+        SceneManager.LoadScene("About");
      }
 	
 }

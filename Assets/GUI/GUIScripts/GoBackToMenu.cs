@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GoBackToMenu : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class GoBackToMenu : MonoBehaviour
 				s.sprite = menuUnclicked;
 				backToStart = true;			
 //		ScoreLoadingScript.SetLoadingScreen();
-				Application.LoadLevel ("StartScreenTest");
+        SceneManager.LoadSceneAsync("StartScreenTest");
 				clickSound = true;
 		}
 }

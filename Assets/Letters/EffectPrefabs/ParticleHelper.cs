@@ -31,11 +31,11 @@ public class ParticleHelper : MonoBehaviour {
 	private ParticleSystem instantiate(ParticleSystem prefab, Vector3 position)
 	{
 		ParticleSystem newParticleSystem = Instantiate(prefab, position, Quaternion.identity) as ParticleSystem;
-		
-		// Make sure it will be destroyed
-		Destroy(
-			newParticleSystem.gameObject,
-			newParticleSystem.startLifetime
+
+        // Make sure it will be destroyed
+        Destroy(
+            newParticleSystem.gameObject,
+            newParticleSystem.main.startLifetime.constant
 		);
 		
 		return newParticleSystem;
