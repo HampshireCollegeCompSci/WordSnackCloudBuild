@@ -51,86 +51,100 @@ public class LetterController : MonoBehaviour
 		public int numVowels;
 		public bool stopSearch = false;
 
-        #endregion
+    #endregion
 
-        // Use this for initialization
-		void Start ()
-		{
-				//initialize variablecontrol reference
-				variables = GameObject.Find ("VariableController").GetComponent<VariableControl> ();
+    // Use this for initialization
+    void Start()
+    {
+        //initialize variablecontrol reference
+        variables = GameObject.Find("VariableController").GetComponent<VariableControl>();
 
-				//connects boardSize variable to the value in the variable controller
-				boardSize = variables.boardSize;
+        //connects boardSize variable to the value in the variable controller
+        boardSize = variables.boardSize;
 
-				//initialize the lettersOnBoard array as the size of the board, as letterBehaviour. Also creates array for lettersOnStove
-				lettersOnBoard = new letterBehaviour[boardSize];
-				lettersOnStove = new letterBehaviour[boardSize];
-				newArraySpot = new bool[boardSize];
-				positionOnBoard = new int[boardSize];
+        //initialize the lettersOnBoard array as the size of the board, as letterBehaviour. Also creates array for lettersOnStove
+        lettersOnBoard = new letterBehaviour[boardSize];
+        lettersOnStove = new letterBehaviour[boardSize];
+        newArraySpot = new bool[boardSize];
+        positionOnBoard = new int[boardSize];
 
-				//creates the list of valid words and letter scores
-				makeWordListAndScoreDict ();
+        //creates the list of valid words and letter scores
+        makeWordListAndScoreDict();
 
-				//initialize all physical spots on board (as arrays of Vector3's according to amount of letters on board
-				stoveSpots = new Vector3[boardSize];
-				bankSpots = new Vector3[boardSize];
-				for (int i = 0; i < boardSize; i++) {
-						stoveSpots [i] = new Vector3 (i * 1.4f - 4.6f, -1.26f, 0);
-						bankSpots [i] = new Vector3 (i * 1.8f - 6.3f, -3.6f, 0);
-						positionOnBoard [i] = -1;
-				}
-				variables.letterGenerationSound = true;
-        if (!(CheckIPhoneType.OldPhone())) {
-						CreateSteam ();
-				}
-				//CheckPermutations("xyzwvtxx");
-		}
+        //initialize all physical spots on board (as arrays of Vector3's according to amount of letters on board
+        stoveSpots = new Vector3[boardSize];
+        bankSpots = new Vector3[boardSize];
+        for (int i = 0; i < boardSize; i++)
+        {
+            stoveSpots[i] = new Vector3(i * 1.4f - 4.6f, -1.26f, 0);
+            bankSpots[i] = new Vector3(i * 1.8f - 6.3f, -3.6f, 0);
+            positionOnBoard[i] = -1;
+        }
+        variables.letterGenerationSound = true;
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            if (!(CheckIPhoneType.OldPhone()))
+            {
+                CreateSteam();
+            }
+            //CheckPermutations("xyzwvtxx");
+        }
+    }
 
-		// Update is called once per frame
-		void Update ()
-		{
-				string word = sendWord ();
-				//check if there even is a word!
-				if (word == null || word.Length < variables.minWordLength || !checkForWord (word)) {
-						variables.isWord = false;
-				} else {
-						variables.isWord = true;
-				}
-				//triggers the check to met tastes if the word on the stove is a new and valid 
-				if (variables.isWord && lastWordChecked != word) {
-						variables.timeToCheckForTastes = true;
-						//sets the initial values for all highlighting options to false before they are checked
-						for (int i = 0; i < variables.timeToHighlightTaste.Length; i++) {
-								variables.timeToHighlightTaste [i] = false;
-						}
-						variables.timeToCheckForTastes = true;
-				} 
-				lastWordChecked = word;
-				//Calls MoveToFromStoveArray, which in turn calls three functions related to making sure any letters clicked either go to the stove,
-				//are removed from stove (if they are clicked off the stove)
-				moveToAndFromStove ();
+    // Update is called once per frame
+    void Update()
+    {
+        string word = sendWord();
+        //check if there even is a word!
+        if (word == null || word.Length < variables.minWordLength || !checkForWord(word))
+        {
+            variables.isWord = false;
+        }
+        else
+        {
+            variables.isWord = true;
+        }
+        //triggers the check to met tastes if the word on the stove is a new and valid 
+        if (variables.isWord && lastWordChecked != word)
+        {
+            variables.timeToCheckForTastes = true;
+            //sets the initial values for all highlighting options to false before they are checked
+            for (int i = 0; i < variables.timeToHighlightTaste.Length; i++)
+            {
+                variables.timeToHighlightTaste[i] = false;
+            }
+            variables.timeToCheckForTastes = true;
+        }
+        lastWordChecked = word;
+        //Calls MoveToFromStoveArray, which in turn calls three functions related to making sure any letters clicked either go to the stove,
+        //are removed from stove (if they are clicked off the stove)
+        moveToAndFromStove();
 
-				//if there are fewer than boardSize letters (basically if a word has been sent to a character) refills the letter banks
-				//to the adequate size
-				if (myLetters.Length < variables.boardSize) {
-						//Debug.Log ("Replacing letters because " + myLetters.Length + " is less than " + variables.boardSize);
-						replaceBankLetters ();
-				}
+        //if there are fewer than boardSize letters (basically if a word has been sent to a character) refills the letter banks
+        //to the adequate size
+        if (myLetters.Length < variables.boardSize)
+        {
+            //Debug.Log ("Replacing letters because " + myLetters.Length + " is less than " + variables.boardSize);
+            replaceBankLetters();
+        }
 
-				//ends the game if the player has run out of letters
-				//changed - used to be emptyLetterCount >= 5
-				//if ((variables.totalLetters == 0) && (countToEndGame >= 7))
-				//{
-				//    gameController.GetComponent<wordBuildingController>().sendVariablestoScoreScreen();
-				//    Application.LoadLevel("ScoreScreen");
-				//}
-        if (!(CheckIPhoneType.OldPhone())) {			
-						TurnOnOffSteam ();
-				}
-				countToEndGame = CountEmptyLetters (myLetters);
-				//updatePlaceholders();
-		  
-		}
+        //ends the game if the player has run out of letters
+        //changed - used to be emptyLetterCount >= 5
+        //if ((variables.totalLetters == 0) && (countToEndGame >= 7))
+        //{
+        //    gameController.GetComponent<wordBuildingController>().sendVariablestoScoreScreen();
+        //    Application.LoadLevel("ScoreScreen");
+        //}
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            if (!(CheckIPhoneType.OldPhone()))
+            {
+                TurnOnOffSteam();
+            }
+            countToEndGame = CountEmptyLetters(myLetters);
+            //updatePlaceholders();
+        }
+    }
 
 		//KEEP THIS FUNCTION - it is in progress!!
 //		void updatePlaceholders(){

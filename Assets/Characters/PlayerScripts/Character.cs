@@ -346,13 +346,15 @@ public class Character : MonoBehaviour
                 //uses lower res sprites if the phone is a 4s or older
                 if (characterNum != 0)
                 {//ensures that the trash character does not have a programatically scaled spritesheet
-                    if (CheckIPhoneType.OldPhone())
+                    //Default is uncompressed, but if we have an old iPhone we want compressed.
+                    GetComponent<Animator>().runtimeAnimatorController = uncompressedAnim;
+
+                    if (Application.platform == RuntimePlatform.IPhonePlayer)
                     {
-                        GetComponent<Animator>().runtimeAnimatorController = compressedAnim;
-                    }
-                    else
-                    {
-                        GetComponent<Animator>().runtimeAnimatorController = uncompressedAnim;
+                        if (CheckIPhoneType.OldPhone())
+                        {
+                            GetComponent<Animator>().runtimeAnimatorController = compressedAnim;
+                        }
                     }
                 }
                 letterGenerator = GameObject.FindGameObjectWithTag("letterController");
