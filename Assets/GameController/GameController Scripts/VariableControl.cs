@@ -17,11 +17,6 @@ public class VariableControl : MonoBehaviour
 		public int firstAlert = 30;
 		public int secondAlert = 15;
 
-		//what iphone model it is running on.
-		//0 = unidentified, 1 = 4S or older (below), 2 = 5 or newer (higher)
-		//[HideInInspector]
-		public int iPhoneType = 1;
-
 		//letter tuning variables
 		public int numA = 9;
 		public int numB = 2;
@@ -179,8 +174,6 @@ public class VariableControl : MonoBehaviour
 		// Use this for initialization
 		void Awake ()
 		{
-				CheckIphoneType ();
-
 				phase2CharacterPositions = new Vector3[characterSelectNum];
 				phase1SelectedCharPositions = new Vector3[characterSelectNum];
 				characterTasteSpots = new Vector3[characterSelectNum];
@@ -308,55 +301,7 @@ public class VariableControl : MonoBehaviour
 						timeToChangeGameState = false;
 				}
 		}
-		void CheckIphoneType ()
-		{
-
-				//sets an int telling what iPhone type this is being played on 
-				//string gen = iPhoneSettings.generation.ToString();
-
-//		if(gen == "iPhone" ||  gen == "iPhone3G" || gen == "iPhone3GS" || gen == "iPhone4S" || gen == "iPhone4"){
-//			iPhoneType = 1;
-//		}
-//		if(gen == "iPhone5" ||  gen == "iPhone5S" || gen == "iPhone6" || gen == "iPhone6Plus"){
-//			iPhoneType = 2;
-//		}
-//        else
-//        {
-//            iPhoneType = 2;
-//        }
-#if UNITY_IPHONE
-        ///* To comment out this block, simply delete the first two comment lines on this line
-			switch(iPhone.generation){
-			case (iPhoneGeneration.iPhone):
-				iPhoneType = 1; 
-				break;
-			case (iPhoneGeneration.iPhone3G):
-				iPhoneType = 1; 
-				break;
-			case (iPhoneGeneration.iPhone3GS):
-				iPhoneType = 1; 
-				break;
-			case (iPhoneGeneration.iPhone4S):
-				iPhoneType = 1; 
-				break;
-			case (iPhoneGeneration.iPhone4):
-				iPhoneType = 1; 
-				break;
-			case (iPhoneGeneration.iPhone5):
-				iPhoneType = 2; 
-				break;
-			case (iPhoneGeneration.iPhone5S):
-				iPhoneType = 2; 
-				break;
-	//		case (iPhoneGeneration.iPhone6):
-	//			iPhoneType = 2; 
-	//			break;
-	//		case (iPhoneGeneration.iPhone6Plus):
-	//			iPhoneType = 2; 
-	//			break;
-			}//*/
-#endif
-		}
+		
 
 		void KeepTime ()
 		{
