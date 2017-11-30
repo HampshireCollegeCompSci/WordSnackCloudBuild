@@ -341,7 +341,7 @@ public class Character : MonoBehaviour
             #endregion
 
             //Let's see if all that text-making worked or not
-            Debug.Log("My character number is " + characterNum + " and I like " + thingsILike);
+            //Debug.Log("My character number is " + characterNum + " and I like " + thingsILike);
             if (SceneManager.GetActiveScene().name == "WordMaking")
             {
                 //uses lower res sprites if the phone is a 4s or older
@@ -356,9 +356,9 @@ public class Character : MonoBehaviour
                             GetComponent<Animator>().runtimeAnimatorController = compressedAnim;
                         }
                 }
-                letterGenerator = GameObject.FindWithTag("letterController");
+                letterGenerator = GameObject.Find("letterGeneration");
                 //letterGenerator = GameObject.FindGameObjectWithTag("letterController");
-                letterControl = letterGenerator.gameObject.GetComponent<LetterController>();
+                letterControl = letterGenerator.GetComponent<LetterController>();
 
                 if (this.characterNum != 0)
                 {
