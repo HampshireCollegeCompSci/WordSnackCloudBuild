@@ -38,7 +38,7 @@ public class ChangeScene : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "SplashScreen")
             {
-                SceneManager.LoadScene("StartScreenTest");
+                SceneManager.LoadSceneAsync("StartScreenTest");
             }
         }
 
@@ -54,7 +54,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "SplashScreen")
         {
-            SceneManager.LoadScene("StartScreenTest");
+            SceneManager.LoadSceneAsync("StartScreenTest");
         }
     }
 

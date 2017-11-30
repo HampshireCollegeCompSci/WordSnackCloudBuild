@@ -41,7 +41,7 @@ public class AboutButtonHandler : MonoBehaviour {
          }
          buttonPressed = true;
          clickSound = true;
-        SceneManager.LoadScene("About");
+        SceneManager.LoadSceneAsync("About");
      }
 	
 }

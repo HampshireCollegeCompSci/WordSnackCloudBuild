@@ -246,7 +246,7 @@ public class wordBuildingController : MonoBehaviour
 				closingTimeText.SetActive (true);
 				yield return new WaitForSeconds (variables.gameOverOnScreenTimer);
                 sendVariablestoScoreScreen();
-                SceneManager.LoadScene("ScoreScreen");
+                SceneManager.LoadSceneAsync("ScoreScreen");
 		}
 
     // This saves the current scores and stats to PlayerPrefs so the receipt can access them

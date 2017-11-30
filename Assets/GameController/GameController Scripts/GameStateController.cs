@@ -55,7 +55,7 @@ public class GameStateController : MonoBehaviour {
 			}
 			stopTiming = true;
             playController.sendVariablestoScoreScreen();
-            SceneManager.LoadScene("ScoreScreen");
+            SceneManager.LoadSceneAsync("ScoreScreen");
 		}
 	}
 
@@ -69,7 +69,7 @@ public class GameStateController : MonoBehaviour {
 	}
 
 	public void loadMainGame () {
-		SceneManager.LoadScene("WordMaking");
+		SceneManager.LoadSceneAsync("WordMaking");
 		//moves the characters into their appropriate positions 
 		for (int i = 0; i < variables.characterSelectNum; i++) {
 			variables.selectedCharacters[i].transform.position = variables.phase2CharacterPositions[i];

@@ -322,6 +322,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 7f29bdf4a381743f390d64317dd9b2da, type: 2}
   m_PrefabInternal: {fileID: 989224036}
+--- !u!114 &301166126 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400000, guid: 7f29bdf4a381743f390d64317dd9b2da,
+    type: 2}
+  m_PrefabInternal: {fileID: 989224036}
+  m_Script: {fileID: 11500000, guid: fd0a28a09131a44cca568d1532924d1a, type: 3}
 --- !u!1 &370837981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,10 +4834,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 9500002, guid: 6c498591e8ed14c3386e092d1b2828a6, type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6c498591e8ed14c3386e092d1b2828a6, type: 2}
+      propertyPath: letterControl
+      value: 
+      objectReference: {fileID: 301166126}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c498591e8ed14c3386e092d1b2828a6, type: 2}
   m_IsPrefabParent: 0

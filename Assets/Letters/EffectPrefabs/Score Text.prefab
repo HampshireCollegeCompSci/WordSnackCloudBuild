@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcf6bc23eb0b4e82b9dba3e43dadf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseScore: 5
-  totalScore: 15
+  baseScore: 7
+  totalScore: 21
   multiplier: 3
   score: 1
   mult: 0

@@ -48,7 +48,7 @@ public class characterSelectController : MonoBehaviour {
 		Destroy (GameObject.Find ("Starfield Background"));
 //		Destroy (GameObject.Find ("Diner"));
 
-        SceneManager.LoadScene("WordMaking");
+        SceneManager.LoadSceneAsync("WordMaking");
 		//moves the characters into their appropriate positions
 	}
 }

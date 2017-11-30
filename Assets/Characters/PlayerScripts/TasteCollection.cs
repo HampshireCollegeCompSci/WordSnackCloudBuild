@@ -142,6 +142,7 @@ public static class TasteCollection
 
     public static float endsWithVowel(string word)
     {
+        //Debug.Log("word is " + word);
         if (vowels.Contains(word[word.Length - 1]) || word[word.Length - 1] == 'y')
             return variables.endsWithVowelMult;
         return 0;

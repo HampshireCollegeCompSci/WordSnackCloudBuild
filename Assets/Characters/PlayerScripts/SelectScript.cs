@@ -161,7 +161,7 @@ public class SelectScript : MonoBehaviour
 		PlayerPrefs.SetInt("Character 1", variables.selectedCharacterNums[0]);
 		PlayerPrefs.SetInt("Character 2", variables.selectedCharacterNums[1]);
 		
-        SceneManager.LoadScene("WordMaking");
+        SceneManager.LoadSceneAsync("WordMaking");
 		//moves the characters into their appropriate positions
 	}
 }

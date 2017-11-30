@@ -28,6 +28,6 @@ public class exitGameplayButton : MonoBehaviour {
 	{
 		clickSound = true;
 		gameObject.GetComponent<Renderer>().material.SetTexture("_MainTex", p.exitButtons[0]);
-        SceneManager.LoadScene("StartScreenTest");
+        SceneManager.LoadSceneAsync("StartScreenTest");
 	}
 }

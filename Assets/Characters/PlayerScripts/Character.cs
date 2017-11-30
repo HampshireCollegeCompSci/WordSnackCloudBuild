@@ -47,8 +47,8 @@ public class Character : MonoBehaviour
     //Used to send the score this character generated out to analytics
     public int scoreFedToMe;
     // Used to retrieve words to potentially send to a character
-    public LetterController letterControl;
-    public GameObject letterGenerator;
+    LetterController letterControl;
+    GameObject letterGenerator;
     // Used to add default tastes to characters
     private VariableControl variables;
     // Dictionary of taste ID's to names. 
@@ -341,7 +341,7 @@ public class Character : MonoBehaviour
             #endregion
 
             //Let's see if all that text-making worked or not
-            //Debug.Log("My character number is " + characterNum + " and I like " + thingsILike);
+            Debug.Log("My character number is " + characterNum + " and I like " + thingsILike);
             if (SceneManager.GetActiveScene().name == "WordMaking")
             {
                 //uses lower res sprites if the phone is a 4s or older
@@ -350,16 +350,15 @@ public class Character : MonoBehaviour
                     //Default is uncompressed, but if we have an old iPhone we want compressed.
                     GetComponent<Animator>().runtimeAnimatorController = uncompressedAnim;
 
-                    if (Application.platform == RuntimePlatform.IPhonePlayer)
-                    {
+
                         if (CheckIPhoneType.OldPhone())
                         {
                             GetComponent<Animator>().runtimeAnimatorController = compressedAnim;
                         }
-                    }
                 }
-                letterGenerator = GameObject.FindGameObjectWithTag("letterController");
-                letterControl = letterGenerator.GetComponent<LetterController>();
+                letterGenerator = GameObject.FindWithTag("letterController");
+                //letterGenerator = GameObject.FindGameObjectWithTag("letterController");
+                letterControl = letterGenerator.gameObject.GetComponent<LetterController>();
 
                 if (this.characterNum != 0)
                 {

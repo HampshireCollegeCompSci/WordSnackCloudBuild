@@ -32,7 +32,7 @@ public class AboutUsMove : MonoBehaviour {
 			pos.z -= Time.deltaTime*speed;
 			transform.localPosition = pos;
 		}else{
-            SceneManager.LoadScene("StartScreenTest");
+            SceneManager.LoadSceneAsync("StartScreenTest");
 		}
 		clickSound = true;
 	}

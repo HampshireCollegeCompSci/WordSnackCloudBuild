@@ -333,7 +333,7 @@ public class PlayMusic : MonoBehaviour
 				//Plays the end of the sizzle sound when the letter is removed from the stove.
 				if (playedSteamEnd == false && audioManager.audioSourceArray [9].isPlaying == false && sizzled == true && GameObject.Find ("letterGeneration").GetComponent<LetterController> ().numLettersOnStove == 0) {
 						audioManager.Play (11);
-						Debug.Log ("steamend");
+						//Debug.Log ("steamend");
 						playedSteamEnd = true;
 
 				}

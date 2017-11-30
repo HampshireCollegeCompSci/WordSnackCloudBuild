@@ -18,7 +18,7 @@ public class StoreWordsFed : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "WordMaking" || SceneManager.GetActiveScene().name == "ScoreScreen"){
 			DontDestroyOnLoad(gameObject);
 		}
-		Debug.Log("WordsFed is Here");
+		//Debug.Log("WordsFed is Here");
 	}
 	
 	// Update is called once per frame

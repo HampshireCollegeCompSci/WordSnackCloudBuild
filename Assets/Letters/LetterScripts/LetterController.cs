@@ -241,7 +241,8 @@ public class LetterController : MonoBehaviour
 		char randomLetter ()
 		{    
 				//I was getting two of the same letter in a row a LOT. I hope this will fix that.
-				Random.seed = System.Environment.TickCount; 
+				//Random.seed = System.Environment.TickCount; 
+                Random.InitState(System.Environment.TickCount);
                 
                 if (variables.totalLetters <= 0 && variables.timedMode)
                 {
@@ -321,7 +322,7 @@ public class LetterController : MonoBehaviour
                     else
                     {
                         //We now have a vowel and can return it.
-                        Debug.Log("Logic says we MUST return a vowel and we've got one to give");
+                        //Debug.Log("Logic says we MUST return a vowel and we've got one to give");
                         char vowelToReturn = vowelsInLetterBag[Random.Range(0, vowelsInLetterBag.Count())]; //pick a random vowel
                         variables.totalVowels--; //decrement total number of Vowels
                         variables.totalLetters--; //decrement total number of letters
