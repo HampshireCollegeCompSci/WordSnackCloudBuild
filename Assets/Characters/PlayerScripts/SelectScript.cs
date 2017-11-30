@@ -31,7 +31,7 @@ public class SelectScript : MonoBehaviour
 	// A reference to the 
 	
 	public bool newSelect;
-	Camera camera;
+	Camera MyCamera;
 	Bounds characterBounds;
     #endregion
 
@@ -47,7 +47,7 @@ public class SelectScript : MonoBehaviour
 		//establishes script reference
 		variables = variableController.GetComponent<VariableControl>();
 		character = gameObject.GetComponent<Character>();
-		camera = GameObject.Find ("Main Camera").GetComponent<Camera>();
+        MyCamera = GameObject.Find ("Main Camera").GetComponent<Camera>();
 		characterBounds = gameObject.GetComponent<BoxCollider> ().bounds;
 	}
 	// Use this for initialization

@@ -38,7 +38,7 @@ public class ChangeScene : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "SplashScreen")
             {
-                Destroy(GameObject.Find("SpaceShip"));
+
                 SceneManager.LoadSceneAsync("StartScreenTest");
             }
         }
@@ -51,14 +51,13 @@ public class ChangeScene : MonoBehaviour
     }
 
 
-    void OnMouseDown()
+    /*void OnMouseDown()
     {
         if (SceneManager.GetActiveScene().name == "SplashScreen")
         {
-            Destroy(GameObject.Find("SpaceShip"));
             SceneManager.LoadSceneAsync("StartScreenTest");
         }
-    }
+    }*/
 
 //    void OnGUI()
 //    {

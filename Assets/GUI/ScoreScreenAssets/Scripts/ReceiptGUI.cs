@@ -12,7 +12,7 @@ public class ReceiptGUI : MonoBehaviour
 	// A constant used to adjust how far down the receipt should scroll
 	public float EmptyReceiptLength;
 	// A constant used to adjust how far up the receipt should scroll
-	public Camera camera;
+	public Camera MyCamera;
 	public float lowestPoint;
 	public float screenOffset;
 	public GameObject RowPrefab;

@@ -15,7 +15,7 @@ public class PauseMenuButton : MonoBehaviour {
 	public GameObject exitGameUnclicked;
 	LetterController l;
 	wordBuildingController w;
-	Camera camera;
+	Camera MyCamera;
 	Bounds pauseButtonBounds;
 	Bounds resumeUnclickedBounds;
 	Bounds resumeClickedBounds;
@@ -33,7 +33,7 @@ public class PauseMenuButton : MonoBehaviour {
 		pauseButtonBounds = gameObject.GetComponent<BoxCollider> ().bounds;
 		l = letterGen.GetComponent<LetterController> ();
 		w = gameController.GetComponent<wordBuildingController> ();
-		camera = GameObject.Find ("Main Camera").GetComponent<Camera> ();
+        MyCamera = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		mPauseButton = gameObject.GetComponent<MeshRenderer> ();
 		mTrash = trashCan.GetComponent<MeshRenderer> ();
 		pauseMenuBackground.SetActive (false);
@@ -44,7 +44,7 @@ public class PauseMenuButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(UniversalInput.press && UniversalInput.inRect(pauseButtonBounds, camera)){
+		if(UniversalInput.press && UniversalInput.inRect(pauseButtonBounds, GetComponent<Camera>())){
 			dinerRoom.SetActive(false);
 			pauseMenuBackground.SetActive(true);
 			mPauseButton.GetComponent<Renderer>().enabled = false;
@@ -62,7 +62,7 @@ public class PauseMenuButton : MonoBehaviour {
 		// handling the display of the resume button
 		if (resumeUnclicked != null) {
 			resumeUnclickedBounds = resumeUnclicked.GetComponent<BoxCollider> ().bounds;
-			if(UniversalInput.inRect(resumeUnclickedBounds, camera)){
+			if(UniversalInput.inRect(resumeUnclickedBounds, GetComponent<Camera>())){
 				resumeClicked.SetActive(true);
 			}else{
 				resumeClicked.SetActive(false);
@@ -71,7 +71,7 @@ public class PauseMenuButton : MonoBehaviour {
 
 		if (resumeClicked != null) {
 			resumeClickedBounds = resumeClicked.GetComponent<BoxCollider> ().bounds;
-			if(UniversalInput.press && UniversalInput.inRect(resumeClickedBounds, camera)){
+			if(UniversalInput.press && UniversalInput.inRect(resumeClickedBounds, GetComponent<Camera>())){
 				pauseMenuBackground.SetActive(false);
 				dinerRoom.SetActive(true);
 				mPauseButton.GetComponent<Renderer>().enabled = true;
@@ -92,7 +92,7 @@ public class PauseMenuButton : MonoBehaviour {
 		// handling the display of exit game button
 		if (exitGameUnclicked != null) {
 			exitGameUnclickedBounds = exitGameUnclicked.GetComponent<BoxCollider> ().bounds;
-			if(UniversalInput.inRect(exitGameUnclickedBounds, camera)){
+			if(UniversalInput.inRect(exitGameUnclickedBounds, GetComponent<Camera>())){
 				exitGameClicked.SetActive(true);
 			}else{
 				exitGameClicked.SetActive(false);
@@ -101,7 +101,7 @@ public class PauseMenuButton : MonoBehaviour {
 		
 		if (exitGameClicked != null) {
 			exitGameClickedBounds = exitGameClicked.GetComponent<BoxCollider> ().bounds;
-			if(UniversalInput.press && UniversalInput.inRect(exitGameClickedBounds, camera)){
+			if(UniversalInput.press && UniversalInput.inRect(exitGameClickedBounds, GetComponent<Camera>())){
 				exitGameClicked.SetActive(true);
 //				StartCoroutine(waitForButtonPress("StartScreenTest"));
                 SceneManager.LoadSceneAsync("StartScreenTest");

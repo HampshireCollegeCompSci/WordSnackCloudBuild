@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayMusic : MonoBehaviour
 {
 	
-		public GameObject audio;
+		public GameObject MyAudio;
 		AudioManager audioManager;
 	
 		//PlayButtonHandler playButtonHandler;
@@ -52,7 +52,7 @@ public class PlayMusic : MonoBehaviour
 		void Start ()
 		{
 		
-				audioManager = audio.GetComponent<AudioManager> ();
+				audioManager = GetComponent<AudioSource>().GetComponent<AudioManager> ();
 				audioManager.SetAllVolume ();
 
 
