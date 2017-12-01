@@ -211,10 +211,12 @@ public class wordBuildingController : MonoBehaviour
         if (variables.timeToHighlightTaste[3] && letterController.numLettersOnStove > 1)
             tasteTexts[3].GetComponent<Renderer>().material.SetTexture("_MainTex", rightBottomHighLights[character2Num]);
         else
+            Debug.Log(tasteTexts[3]);
             if (tasteTexts[3] != tasteTexts[2])
         {
             Debug.Log("3 doesn't match 2. Imagine that.");
         }
+                        Debug.Log(rightBottomTaste [character2Num]);
 						tasteTexts [3].GetComponent<Renderer>().material.SetTexture ("_MainTex", rightBottomTaste [character2Num]);
 				
                                                                                    
