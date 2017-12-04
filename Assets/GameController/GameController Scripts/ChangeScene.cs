@@ -21,12 +21,13 @@ public class ChangeScene : MonoBehaviour
             Instantiate(Resources.Load("AudioManager_Menu"), new Vector3(0, 0, 0), Quaternion.identity);
         }
 
-        Resources.UnloadUnusedAssets();
 
 		timeGoneBy = 0.0f;
 
 		DontDestroyOnLoad (GameObject.Find ("Diner"));
 		DontDestroyOnLoad (GameObject.Find ("Starfield Background"));
+        //Resources.UnloadUnusedAssets();
+
     }
 
     // Update is called once per frame

@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -21,11 +21,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400004}
-  - 23: {fileID: 2300000}
-  - 102: {fileID: 10200000}
+  - component: {fileID: 400004}
+  - component: {fileID: 2300000}
+  - component: {fileID: 10200000}
   m_Layer: 0
   m_Name: LettersRemaining
   m_TagString: Untagged
@@ -44,8 +44,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
+  - {fileID: 4334402983316376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -53,13 +55,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: 4.19999981, z: 3.16912556}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalPosition: {x: -1.25, y: 3.9115639, z: 3.1691256}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2300000
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -67,16 +70,28 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 875a11d5403dd064097bb40287e6e2ea, type: 3}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!102 &10200000
 TextMesh:
@@ -87,7 +102,7 @@ TextMesh:
   m_GameObject: {fileID: 100004}
   m_Text: (filler text)
   m_OffsetZ: 0
-  m_CharacterSize: .25
+  m_CharacterSize: 0.25
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -110,19 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcaeb0b29cf9f14cb8aebfeceffb82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 0}
-  - {fileID: 100000, guid: 8c97430b39c4640c5938d018e327d621, type: 2}
-  - {fileID: 100000, guid: f73fa8a344b894dbebedde99c7c4d63b, type: 2}
-  - {fileID: 100000, guid: 6af56b9d39e34449b96ea0cfee903de2, type: 2}
-  - {fileID: 100000, guid: d79295496b6ec334987d5de36c83774c, type: 2}
-  - {fileID: 100000, guid: d18a42d88dc86a54b9daa240c536c57b, type: 2}
   tastePanels:
-  - {fileID: 0}
-  - {fileID: 0}
-  highlightPanels:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   tasteTexts:
@@ -130,97 +133,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  leftPanels:
-  - {fileID: 0}
-  - {fileID: 2800000, guid: d6caade98a81f40efb35eb4e80ca72fe, type: 3}
-  - {fileID: 2800000, guid: 72912ab1ff2234802a793bda88869ac2, type: 3}
-  - {fileID: 2800000, guid: 653a13a8fed564b739867339c939488a, type: 3}
-  - {fileID: 2800000, guid: e5a49b38eea8e417893d6392f5be1c28, type: 3}
-  - {fileID: 2800000, guid: f7cfdf5648c824e8f8b8f559309baf44, type: 3}
-  rightPanels:
-  - {fileID: 0}
-  - {fileID: 2800000, guid: 2e5c9254f44424e2a8f8ec3a3f8f11a3, type: 3}
-  - {fileID: 2800000, guid: eff20f13528a246fd82b252a7c79f49f, type: 3}
-  - {fileID: 2800000, guid: 3edccc35099594f40b164a9bb4d0be1a, type: 3}
-  - {fileID: 2800000, guid: 15ef283629df34732a3d3884ff0380b8, type: 3}
-  - {fileID: 2800000, guid: 1f5f34dde92af41f9aa20656bc910908, type: 3}
-  leftBottomHighLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rightBottomHighLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  leftTopHighLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rightTopHighLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  leftTopTaste:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rightTopTaste:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  leftBottomTaste:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rightBottomTaste:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fadingOut: 0
-  fadeOut: 0
-  greyOut: {fileID: 0}
-  closingTimeText: {fileID: 0}
-  alertFlash: {fileID: 0}
-  alertStarted: 0
-  secondAlert: 0
-  flashOnce: 1
-  variables: {fileID: 0}
-  variableController: {fileID: 0}
-  endGameButton: {fileID: 2800000, guid: 8b2a0dfa47b9e42ca907f61f61345ada, type: 3}
-  character1: {fileID: 0}
-  character2: {fileID: 0}
-  trashCharacter: {fileID: 0}
-  tutorial: {fileID: 0}
-  lettersRemaining: {fileID: 10200000}
-  timeRemaining: {fileID: 0}
-  char1Taste1: {fileID: 0}
-  char1Taste2: {fileID: 0}
-  char2Taste1: {fileID: 0}
-  char2Taste2: {fileID: 0}
   tasteHighLightPos:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -231,6 +143,51 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  characters:
+  - {fileID: 0}
+  - {fileID: 100000, guid: 8c97430b39c4640c5938d018e327d621, type: 2}
+  - {fileID: 100000, guid: f73fa8a344b894dbebedde99c7c4d63b, type: 2}
+  - {fileID: 100000, guid: 6af56b9d39e34449b96ea0cfee903de2, type: 2}
+  - {fileID: 100000, guid: d79295496b6ec334987d5de36c83774c, type: 2}
+  - {fileID: 100000, guid: d18a42d88dc86a54b9daa240c536c57b, type: 2}
+  character1: {fileID: 0}
+  character2: {fileID: 0}
+  trashCharacter: {fileID: 0}
+  char1Taste1: {fileID: 0}
+  char1Taste2: {fileID: 0}
+  char2Taste1: {fileID: 0}
+  char2Taste2: {fileID: 0}
+  rightCharacterReflection: {fileID: 0}
+  leftCharacterReflection: {fileID: 0}
+  reflectionTextures:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2800000, guid: bcbbee092a6eb47cda79d50a85874813, type: 3}
+  - {fileID: 2800000, guid: 3217c1b0e3b3544e8ae03fa0e45f566c, type: 3}
+  - {fileID: 2800000, guid: d851685da76e043dcb2436543596e7ec, type: 3}
+  - {fileID: 2800000, guid: 96075978604a3421b8a9ebe6a9323426, type: 3}
+  - {fileID: 2800000, guid: db626b59527404090af63e7de5ed6dd2, type: 3}
+  - {fileID: 2800000, guid: 330567f64d94b468c9736d830d260af1, type: 3}
+  - {fileID: 2800000, guid: d86a34fad0955423a8102705d412e263, type: 3}
+  - {fileID: 2800000, guid: 4f1e818b818c2443f834304e0b0f00ae, type: 3}
+  - {fileID: 2800000, guid: 2e462bd6b4e344a7b8856b9f6e812166, type: 3}
+  - {fileID: 2800000, guid: 3a8d2878a49fd4ab7b5cec22183c573f, type: 3}
+  variables: {fileID: 0}
+  variableController: {fileID: 0}
+  endGameButton: {fileID: 2800000, guid: 8b2a0dfa47b9e42ca907f61f61345ada, type: 3}
+  tutorial: {fileID: 0}
+  lettersRemaining: {fileID: 10200000}
+  timeRemaining: {fileID: 102815820232462154}
+  letterCon: {fileID: 0}
+  fadingOut: 0
+  fadeOut: 0
+  greyOut: {fileID: 0}
+  closingTimeText: {fileID: 0}
+  alertFlash: {fileID: 0}
+  alertStarted: 0
+  secondAlert: 0
+  flashOnce: 1
+  flashRedAgain: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -242,4 +199,86 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
+--- !u!1 &1253340121704732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4334402983316376}
+  - component: {fileID: 23018575640888250}
+  - component: {fileID: 102815820232462154}
+  m_Layer: 0
+  m_Name: timeRemaining
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4334402983316376
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253340121704732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.2, z: 3.169126}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400000}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23018575640888250
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253340121704732}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 875a11d5403dd064097bb40287e6e2ea, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!102 &102815820232462154
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253340121704732}
+  m_Text: (filler text)
+  m_OffsetZ: 0
+  m_CharacterSize: 0.25
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 38
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 875a11d5403dd064097bb40287e6e2ea, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295

@@ -200,7 +200,6 @@ public class VariableControl : MonoBehaviour
 		void Start ()
 		{
 
-				Resources.UnloadUnusedAssets ();
 				Debug.Log (SceneManager.GetActiveScene().name);
 
 				if (PlayerPrefs.GetInt ("timed") == 0) {
@@ -267,7 +266,6 @@ public class VariableControl : MonoBehaviour
 				allCharTastes [1] = TastesForFred;
 				allCharTastes [5] = TastesForMeghan;
 
-		
 		}
 	
 		// Update is called once per frame
