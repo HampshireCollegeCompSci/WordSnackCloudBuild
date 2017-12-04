@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stillHere : MonoBehaviour {
+public class stillHere : MonoBehaviour
+{
     int howManyTimes;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         howManyTimes = 10;
         DontDestroyOnLoad(GameObject.Find("Taste4"));
-	}
+    }
+}

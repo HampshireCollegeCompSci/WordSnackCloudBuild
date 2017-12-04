@@ -161,6 +161,7 @@ public class PlayMusic : MonoBehaviour
 
 						//Plays "FeedMe" sound when feed them button is pressed.
 						if (GameObject.Find ("feedMe").GetComponent<CharacterSelectUI> ().FeedPressed == true) {
+                Debug.Log("Screwy Loading sound.");
 								audioManager.Play (2);
 								GameObject.Find ("feedMe").GetComponent<CharacterSelectUI> ().FeedPressed = false;
 						}
