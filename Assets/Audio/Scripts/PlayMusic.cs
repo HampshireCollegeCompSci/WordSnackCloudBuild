@@ -41,6 +41,8 @@ public class PlayMusic : MonoBehaviour
 		bool sizzleEnd = false;
 		bool playedSteamEnd = false;
 		bool sizzled = false;
+    bool fedSoundHasPlayed = false;
+    bool modeSelectNoisePlayed = false;
 
 		//Boolean 
 		//bool letterGen;
@@ -113,8 +115,9 @@ public class PlayMusic : MonoBehaviour
 								audioManager.PlayLoop (4);
 						}
 						//Click sound for Play button and About Button.
-						if (GameObject.Find ("PlayButton").GetComponent<PlayButtonHandler> ().buttonPressed == true || GameObject.Find ("AboutButton").GetComponent<AboutButtonHandler> ().buttonPressed == true) {
-								audioManager.Play (1);
+            if ((GameObject.Find ("PlayButton").GetComponent<PlayButtonHandler> ().buttonPressed == true || GameObject.Find ("AboutButton").GetComponent<AboutButtonHandler> ().buttonPressed == true) && modeSelectNoisePlayed == false) {
+								audioManager.PlayOnce (1);
+                modeSelectNoisePlayed = true;
 						}
 				}
 
@@ -159,11 +162,12 @@ public class PlayMusic : MonoBehaviour
 								Debug.Log (numSelected.ToString ());
 						}
 
-						//Plays "FeedMe" sound when feed them button is pressed.
-						if (GameObject.Find ("feedMe").GetComponent<CharacterSelectUI> ().FeedPressed == true) {
-                Debug.Log("Screwy Loading sound.");
-								audioManager.Play (2);
-								GameObject.Find ("feedMe").GetComponent<CharacterSelectUI> ().FeedPressed = false;
+            //Plays "FeedMe" sound when feed them button is pressed.
+            if (GameObject.Find("feedMe").GetComponent<CharacterSelectUI>().FeedPressed == true && !(fedSoundHasPlayed)) {
+                //Debug.Log("Screwy Loading sound.");
+                fedSoundHasPlayed = true;
+                audioManager.PlayOnce (2);
+								//GameObject.Find ("feedMe").GetComponent<CharacterSelectUI> ().FeedPressed = false;
 						}
 				}
 				////////////////////////////

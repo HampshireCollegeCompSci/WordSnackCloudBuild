@@ -332,6 +332,7 @@ public class wordBuildingController : MonoBehaviour
 				//Debug.Log ("Forcing GA Submission.");
 				*/
         // This saves the game info to Unity analytics
+        Debug.Log("Sending analytics!");
         UnityEngine.Analytics.Analytics.CustomEvent("gameOver", new Dictionary<string, object>
         {
             {"mode", mode},
