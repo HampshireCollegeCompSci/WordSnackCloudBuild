@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1157902304364652}
+  m_RootGameObject: {fileID: 1687458478120148}
   m_IsPrefabParent: 1
---- !u!1 &1157902304364652
+--- !u!1 &1687458478120148
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4312458807137326}
-  - component: {fileID: 33537879615292752}
-  - component: {fileID: 23395756445073126}
+  - component: {fileID: 4064413668155078}
+  - component: {fileID: 33120960910389110}
+  - component: {fileID: 23585704498981314}
   m_Layer: 0
   m_Name: letterBank
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &4312458807137326
+--- !u!4 &4064413668155078
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157902304364652}
+  m_GameObject: {fileID: 1687458478120148}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 0.27, y: -4.49, z: -3.8638854}
   m_LocalScale: {x: 1.48, y: 0.14, z: 0.22}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23395756445073126
+--- !u!23 &23585704498981314
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157902304364652}
+  m_GameObject: {fileID: 1687458478120148}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,10 +73,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33537879615292752
+--- !u!33 &33120960910389110
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157902304364652}
+  m_GameObject: {fileID: 1687458478120148}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
