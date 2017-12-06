@@ -66,32 +66,38 @@ TextureImporter:
     21300122: MeghanSpriteSheet 1_61
     21300124: MeghanSpriteSheet 1_62
     21300126: MeghanSpriteSheet 1_63
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -2
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 1
+    serializedVersion: 2
+    filterMode: 2
     aniso: 1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -99,19 +105,63 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings:
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   - buildTarget: iPhone
     maxTextureSize: 2048
-    textureFormat: -2
+    textureFormat: 2
+    textureCompression: 1
     compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: MeghanSpriteSheet 1_0
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,7 +171,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_1
       rect:
         serializedVersion: 2
         x: 512
@@ -131,7 +185,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -141,7 +199,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_3
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -151,7 +213,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_4
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -161,7 +227,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_5
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_5
       rect:
         serializedVersion: 2
         x: 2560
@@ -171,7 +241,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_6
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_6
       rect:
         serializedVersion: 2
         x: 3072
@@ -181,7 +255,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_7
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_7
       rect:
         serializedVersion: 2
         x: 3584
@@ -191,7 +269,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_8
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -201,7 +283,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_9
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_9
       rect:
         serializedVersion: 2
         x: 512
@@ -211,7 +297,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_10
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -221,7 +311,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_11
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_11
       rect:
         serializedVersion: 2
         x: 1536
@@ -231,7 +325,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_12
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_12
       rect:
         serializedVersion: 2
         x: 2048
@@ -241,7 +339,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_13
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_13
       rect:
         serializedVersion: 2
         x: 2560
@@ -251,7 +353,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_14
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_14
       rect:
         serializedVersion: 2
         x: 3072
@@ -261,7 +367,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_15
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_15
       rect:
         serializedVersion: 2
         x: 3584
@@ -271,7 +381,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_16
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_16
       rect:
         serializedVersion: 2
         x: 0
@@ -281,7 +395,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_17
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_17
       rect:
         serializedVersion: 2
         x: 512
@@ -291,7 +409,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_18
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_18
       rect:
         serializedVersion: 2
         x: 1024
@@ -301,7 +423,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_19
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_19
       rect:
         serializedVersion: 2
         x: 1536
@@ -311,7 +437,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_20
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_20
       rect:
         serializedVersion: 2
         x: 2048
@@ -321,7 +451,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_21
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_21
       rect:
         serializedVersion: 2
         x: 2560
@@ -331,7 +465,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_22
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_22
       rect:
         serializedVersion: 2
         x: 3072
@@ -341,7 +479,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_23
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_23
       rect:
         serializedVersion: 2
         x: 3584
@@ -351,7 +493,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_24
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_24
       rect:
         serializedVersion: 2
         x: 0
@@ -361,7 +507,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_25
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_25
       rect:
         serializedVersion: 2
         x: 512
@@ -371,7 +521,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_26
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_26
       rect:
         serializedVersion: 2
         x: 1024
@@ -381,7 +535,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_27
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_27
       rect:
         serializedVersion: 2
         x: 1536
@@ -391,7 +549,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_28
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_28
       rect:
         serializedVersion: 2
         x: 2048
@@ -401,7 +563,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_29
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_29
       rect:
         serializedVersion: 2
         x: 2560
@@ -411,7 +577,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_30
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_30
       rect:
         serializedVersion: 2
         x: 3072
@@ -421,7 +591,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_31
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_31
       rect:
         serializedVersion: 2
         x: 3584
@@ -431,7 +605,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_32
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_32
       rect:
         serializedVersion: 2
         x: 0
@@ -441,7 +619,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_33
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_33
       rect:
         serializedVersion: 2
         x: 512
@@ -451,7 +633,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_34
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_34
       rect:
         serializedVersion: 2
         x: 1024
@@ -461,7 +647,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_35
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_35
       rect:
         serializedVersion: 2
         x: 1536
@@ -471,7 +661,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_36
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_36
       rect:
         serializedVersion: 2
         x: 2048
@@ -481,7 +675,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_37
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_37
       rect:
         serializedVersion: 2
         x: 2560
@@ -491,7 +689,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_38
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_38
       rect:
         serializedVersion: 2
         x: 3072
@@ -501,7 +703,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_39
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_39
       rect:
         serializedVersion: 2
         x: 3584
@@ -511,7 +717,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_40
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_40
       rect:
         serializedVersion: 2
         x: 0
@@ -521,7 +731,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_41
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_41
       rect:
         serializedVersion: 2
         x: 512
@@ -531,7 +745,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_42
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_42
       rect:
         serializedVersion: 2
         x: 1024
@@ -541,7 +759,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_43
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_43
       rect:
         serializedVersion: 2
         x: 1536
@@ -551,7 +773,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_44
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_44
       rect:
         serializedVersion: 2
         x: 2048
@@ -561,7 +787,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_45
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_45
       rect:
         serializedVersion: 2
         x: 2560
@@ -571,7 +801,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_46
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_46
       rect:
         serializedVersion: 2
         x: 3072
@@ -581,7 +815,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_47
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_47
       rect:
         serializedVersion: 2
         x: 3584
@@ -591,7 +829,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_48
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_48
       rect:
         serializedVersion: 2
         x: 0
@@ -601,7 +843,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_49
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_49
       rect:
         serializedVersion: 2
         x: 512
@@ -611,7 +857,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_50
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_50
       rect:
         serializedVersion: 2
         x: 1024
@@ -621,7 +871,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_51
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_51
       rect:
         serializedVersion: 2
         x: 1536
@@ -631,7 +885,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_52
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_52
       rect:
         serializedVersion: 2
         x: 2048
@@ -641,7 +899,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_53
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_53
       rect:
         serializedVersion: 2
         x: 2560
@@ -651,7 +913,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_54
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_54
       rect:
         serializedVersion: 2
         x: 3072
@@ -661,7 +927,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_55
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_55
       rect:
         serializedVersion: 2
         x: 3584
@@ -671,7 +941,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_56
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_56
       rect:
         serializedVersion: 2
         x: 0
@@ -681,7 +955,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_57
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_57
       rect:
         serializedVersion: 2
         x: 512
@@ -691,7 +969,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_58
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_58
       rect:
         serializedVersion: 2
         x: 1024
@@ -701,7 +983,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_59
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_59
       rect:
         serializedVersion: 2
         x: 1536
@@ -711,7 +997,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_60
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_60
       rect:
         serializedVersion: 2
         x: 2048
@@ -721,7 +1011,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_61
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_61
       rect:
         serializedVersion: 2
         x: 2560
@@ -731,7 +1025,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_62
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_62
       rect:
         serializedVersion: 2
         x: 3072
@@ -741,7 +1039,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MeghanSpriteSheet 1_63
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MeghanSpriteSheet 1_63
       rect:
         serializedVersion: 2
         x: 3584
@@ -751,5 +1053,12 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
