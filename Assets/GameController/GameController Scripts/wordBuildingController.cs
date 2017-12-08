@@ -70,6 +70,8 @@ public class wordBuildingController : MonoBehaviour
         public bool secondAlert = false;
         public bool flashOnce = true;
         public bool flashRedAgain = false;
+    private int mode = 2; //If we ever SEE it be 2, something went wrong.
+    AnalyticsResult analyticsReturn; //For catching the result of Analytics calls
     #endregion
 
         // Use this for initialization
@@ -158,6 +160,21 @@ public class wordBuildingController : MonoBehaviour
         //}
         //If we haven't used it yet, get rid of it.
         //Resources.UnloadUnusedAssets();
+        if (variables.timedMode == true)
+        {
+            mode = 1;
+        }
+        else
+        {
+            mode = 0;
+        }
+        analyticsReturn = Analytics.CustomEvent("gameStart", new Dictionary<string, object>
+        {
+            {"mode", mode},
+            {"character1", character1Num},
+            {"character2", character2Num}
+        });
+        Debug.Log("Sent gameStart: " + analyticsReturn);
 		}
 		// Update is called once per frame
 		void Update ()
@@ -284,17 +301,6 @@ public class wordBuildingController : MonoBehaviour
         PlayerPrefs.SetInt("Trashed Letter Score", variables.trashedLetterScore);
         PlayerPrefs.Save();
 
-        //For Game Analytics
-        int mode = 2; //So we'll know something went wrong
-        if (variables.timedMode == true)
-        {
-            mode = 1;
-        }
-        else
-        {
-            mode = 0;
-        }
-
         /*				GA.API.GenericInfo.SetSessionUUID(null); //Set a new Session ID to make sure this game is unique
                         GA.API.Design.NewEvent ("mode", mode);
                         GA.API.Design.NewEvent ("score", variables.score);
@@ -332,21 +338,20 @@ public class wordBuildingController : MonoBehaviour
 				//Debug.Log ("Forcing GA Submission.");
 				*/
         // This saves the game info to Unity analytics
-        Debug.Log("Sending analytics!");
-        Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+
+        analyticsReturn = Analytics.CustomEvent("gameOver", new Dictionary<string, object>
         {
             {"mode", mode},
             {"score", variables.score},
             {"character1", character1Num},
             {"character2", character2Num},
             {"trashed_letters", variables.trashedLetters},
-            {"numwordsFedtoCharacter1", character1.GetComponent<Character> ().wordsFedToMe.Count},
-            {"numwordsFedtoCharacter2", character2.GetComponent<Character> ().wordsFedToMe.Count},
             {"character1Score", character1.GetComponent<Character> ().scoreFedToMe},
             {"character2Score", character2.GetComponent<Character> ().scoreFedToMe},
             {"wordsFedToCharacter1", wordsFedToCharacter1},
             {"wordsFedToCharacter2", wordsFedToCharacter2}
         });
+        Debug.Log("Sent gameOver: " + analyticsReturn);
     }
         
         // Flash the screen if time is running out
