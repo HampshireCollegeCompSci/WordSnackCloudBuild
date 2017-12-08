@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4745710836910816}
   - component: {fileID: 33840638246691514}
   - component: {fileID: 23268305175914570}
-  - component: {fileID: 114841765061595078}
   m_Layer: 0
   m_Name: Taste4
   m_TagString: rightPanel
@@ -81,14 +80,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1449223601307826}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114841765061595078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449223601307826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6bc694631adf473f93667a6d87cf723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
