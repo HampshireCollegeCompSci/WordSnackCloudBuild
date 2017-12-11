@@ -147,7 +147,7 @@ PlayerSettings:
     iOS: net.wordsnack.wordsnack
     tvOS: 
   buildNumber:
-    iOS: 
+    iOS: 1.1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 0
@@ -181,9 +181,12 @@ PlayerSettings:
     type: 3}
   iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 1f815a8340fc7491da306e61961a7e70,
     type: 3}
-  iPhone47inSplashScreen: {fileID: 0}
-  iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 0}
+  iPhone47inSplashScreen: {fileID: 2800000, guid: 24b462c3f98d94b6b97d8adac0780a13,
+    type: 3}
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 24b462c3f98d94b6b97d8adac0780a13,
+    type: 3}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 24b462c3f98d94b6b97d8adac0780a13,
+    type: 3}
   iPadPortraitSplashScreen: {fileID: 2800000, guid: 1f815a8340fc7491da306e61961a7e70,
     type: 3}
   iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 24b462c3f98d94b6b97d8adac0780a13,
