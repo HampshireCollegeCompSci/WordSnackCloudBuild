@@ -142,12 +142,13 @@ PlayerSettings:
   resolutionScalingMode: 0
   applicationIdentifier:
     Android: net.wordsnack.wordsnack
-    Standalone: unity.cs327.Word Snack
+    Standalone: net.wordsnack.wordsnack
     Tizen: 
     iOS: net.wordsnack.wordsnack
     tvOS: 
   buildNumber:
-    iOS: 1.1
+    Standalone: 2
+    iOS: 2
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 0
