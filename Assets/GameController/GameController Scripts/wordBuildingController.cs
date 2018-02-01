@@ -136,7 +136,7 @@ public class wordBuildingController : MonoBehaviour
 
 
 				PlayerPrefs.SetInt ("Instructions", 0);
-				tutorial = GameObject.Find ("Tutorial");
+				//tutorial = GameObject.Find ("Tutorial");
 				//instructionsClose = GameObject.Find ("close");
 
 				if (GameObject.Find ("AudioManager_Game(Clone)") == null) {
